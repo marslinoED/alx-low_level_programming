@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-#include "main.c"
+#include "main.h"
 /**
  * main - main block
  * Description: Get a random number and print the number
