@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-void print_alphabet()
+void print_alphabet(void)
 {	
 	char c='a';
 	while (c!=('z'-1))
