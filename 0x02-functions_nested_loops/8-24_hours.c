@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * jack_bauer - prints every minute of the day of Jack Bauer
@@ -13,12 +14,12 @@ int m2 =0;
 int m1 =0;
 	for (int i = 0; i < 1440; ++i) 
 	{
-		putchar(m2);
-		putchar(m1);
-		putchar(':');
-		putchar(s2);
-		putchar(s1);
-		putchar('\n');
+		_putchar(m2);
+		_putchar(m1);
+		_putchar(':');
+		_putchar(s2);
+		_putchar(s1);
+		_putchar('\n');
 		s1++;
 		if (s1>=10)
 		{
