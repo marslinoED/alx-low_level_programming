@@ -2,18 +2,28 @@
 
 /**
  * print_square - check for a digit
- * @size : number of _ to be printed
+ * @n : number of _ to be printed
  * Return:void
  */
 
-void print_square(int size)
+void print_square(int n)
 {
-	for (int i = 0; i < size; i++)
+
+	int i = 0, ii;
+
+	while (i < n && n > 0)
 	{
-		for (int j = 0; j < size; j++)
+		ii = 0;
+		while (ii < n)
 		{
-		_putchar('#');
+			_putchar('#');
+			ii++;
 		}
+
 		_putchar('\n');
+		i++;
 	}
+	if (i == 0)
+		_putchar('\n');
+
 }
