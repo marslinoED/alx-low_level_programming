@@ -25,6 +25,7 @@ char *_strcat(char *dest, char *src)
 		z++;
 		x++;
 	}
+	a++;
 	while (a--)
 	{
 		new[z] = src[y];
