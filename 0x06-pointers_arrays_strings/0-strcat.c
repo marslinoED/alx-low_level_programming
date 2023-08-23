@@ -32,5 +32,6 @@ char *_strcat(char *dest, char *src)
 		z++;
 		y++;
 	}
+	new[z] = '\n';
 	return (new);
 }
