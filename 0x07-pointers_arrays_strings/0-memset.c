@@ -1,12 +1,11 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _memset - ll
- * @s: ll
- * @b: ll
- * @n: ll
- * Return: ll
+ * _memset - ironnou
+ * @s: pointer to char params
+ * @b: data to change
+ * @n: index
+ * Return: *s
  */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -19,3 +18,4 @@ char *_memset(char *s, char b, unsigned int n)
 	}
 	return (s);
 }
+
