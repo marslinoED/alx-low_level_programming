@@ -7,7 +7,7 @@
  * Return: ll
  */
 
-int _pow_recursion(int x, int y)
+int _pow_recursion(long x, long y)
 {
 	if (y < 0)
 		return (-1);
