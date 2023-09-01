@@ -4,52 +4,53 @@
 #include <ctype.h>
 
 /**
- * main - function
- * @argc: offset count
- * @argv: offset value
+ * main - prints the minimum number of coins
+ * to make change for an amount of money
+ * @argc: n args
+ * @argv: arr args
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
+	int value, c;
+
+	c = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	int val = 0, i = atoi(argv[1]);
-
-	if (i < 0)
+	value = atoi(argv[1]);
+	if (value < 0)
 	{
 		printf("%d\n", 0);
 		return (0);
 	}
-	if (i >= 25)
+	if (value % 25 >= 0)
 	{
-		val += i / 25;
-		i -= i / 25 * 25;
+		c += value / 25;
+		value = value % 25;
 	}
-	if (i >= 10)
+	if (value % 10 >= 0)
 	{
-		val += i / 10;
-		i -= i / 10 * 10;
+		c += value / 10;
+		value = value % 10;
 	}
-	if (i >= 5)
+	if (value % 5 >= 0)
 	{
-		val += i / 5;
-		i -= i / 5 * 5;
+		c += value / 5;
+		value = value % 5;
 	}
-	if (i >= 2)
+	if (value % 2 >= 0)
 	{
-		val += i / 2;
-		i -= i / 2 * 2;
+		c += value / 2;
+		value = value % 2;
 	}
-	if (i >= 1)
+	if (value % 1 >= 0)
 	{
-		val += i / 1;
-		i -= i / 1 * 1;
+		c += value / 1;
 	}
-	printf("%d\n", val);
+	printf("%d\n", c);
 	return (0);
 }
+
