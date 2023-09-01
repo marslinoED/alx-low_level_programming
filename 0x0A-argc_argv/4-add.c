@@ -4,34 +4,36 @@
 #include <ctype.h>
 
 /**
- * main - function
- * @argc: offset count
- * @argv: offset value
+ * main - adds positive numbers
+ * @argc: n args
+ * @argv: arr args
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
-int i = 0;
-int j = 0;
-int val = 0;
-for (i = 1; i < argc; i++)
+	unsigned int i, sum, num;
+
+	sum = 0;
+
+	if (argc < 3)
 	{
-		for (j = 0; argv[i][j] != '0'; j++)
+		printf("%d\n", 0);
+		return (0);
+	}
+	while (argc-- && argc > 0)
+	{
+		for (i = 0; argv[argc][i] != '\0'; i++)
 		{
-			if  (!(isdigit(argv[i][j])))
+			if (!(isdigit(argv[argc][i])))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
+		num = atoi(argv[argc]);
+		sum += num;
 	}
-
-for (i = 1; i < argc; i++)
-        {
-		val += atoi(argv[i]);
-	}
-
-printf("%d\n", val);
-return (0);
+	printf("%d\n", sum);
+	return (sum);
 }
+
