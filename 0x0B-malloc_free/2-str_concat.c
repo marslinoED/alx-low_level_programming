@@ -11,21 +11,27 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int size1 = 0, size2 = 0, i;
-	char *nc;
+	unsigned int size1 = 0, size2 = 0, i;
+	char *tmp, *nc;
 
-	while (!s1[size1])
-		size1++;
-	while (!s2[size2])
-		size2++;
+	if (!s1)
+		s1 = "";
+	else
+		size1 =  _strlen(s1);
+	if (!s2)
+		s2 = "";
+	else
+		size2 =  _strlen(s2);
 
-	nc = malloc((sizeof(char) * size1 + 1) + (sizeof(char) * size2 + 1) + 10);
+	nc = malloc(size1 + size2 + 1);
+
 	if (nc == 0)
 		return (NULL);
-	for (i = 0; i < size1; i++)
-		nc[i] = s1[size1];
-	size2 += (size1 + 1);
-	for (i = (size1 + 1); i < size2; i++)
-		nc[i] = s2[i  - size1 - 1];
+
+	tmp = nc;
+	while ((*tmp++ = *s1++))
+		;
+	while ((*tmp++ = *s2++))
+		;
 	return (nc);
 }
