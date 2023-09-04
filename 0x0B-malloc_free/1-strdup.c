@@ -1,31 +1,33 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * _strdup - ll
- * @str: ll
- * Return: ll
+ * _strdup - copy
+ * @str: pointer to string
+ * Return: pointer
  */
 
 char *_strdup(char *str)
 {
-	int size = 0, i = 0;
-	char *c;
+	char *s;
+	int i = 0, j;
 
 	if (!str)
 		return (NULL);
 
-	while (str[size] != '\0')
-		size++;
+	while (*(str + i))
+		i++;
+	i++;
+	s = malloc(sizeof(char) * i);
 
-	c = malloc((sizeof(char) * size) + 1);
-
-	if (c == 0)
+	if (s == NULL)
+	{
 		return (NULL);
+	}
 
-	for (i = 0; i <= size; i++)
-		c[i] = str[i];
-
-	return (c);
+	for (j = 0; j <= i; j++)
+	{
+		s[j] = str[j];
+	}
+	return (s);
 }
+
