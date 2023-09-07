@@ -37,20 +37,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	l2 = _strlen(s2);
 	if (n > l2)
 		n = l2;
-	ns = (char*) malloc((sizeof(char) * (l1 + n + 1)));
+	ns = (char *) malloc((sizeof(char) * (l1 + n + 1)));
 	if (ns == NULL)
-		return (NULL);
-	else
 	{
-		for (i = 0; i < l1 + n; i++)
+		return (NULL);
+	}
+	for (i = 0; i < (l1 + n); i++)
 		{
 			if (i < l1)
-				ns [i] = s1[i];
+				ns[i] = s1[i];
 			else
-				ns[i] = s2 [i - l1];
+				ns[i] = s2[i - l1];
 		}
 		ns[i] = '\0';
 		return (ns);
-	}
 
-}	
+
+}
