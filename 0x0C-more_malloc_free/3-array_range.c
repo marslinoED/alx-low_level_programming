@@ -5,8 +5,9 @@
 /**
  * _memset - copy char
  * @s: string
- * @b: input
  * @n: bytes
+ * @min: ll
+ * @max: lll
  * Return: string
  */
 
