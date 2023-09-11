@@ -1,9 +1,4 @@
 #ifndef FILE_MACRO
 #define FILE_MACRO
-int ABS(int x)
-{
-	if (x < 0)
-		x = -1 * x;
-	return (x);
-}
+#define ABS(X) ((X) < 0 ? -1 * (X) : (X))
 #endif
