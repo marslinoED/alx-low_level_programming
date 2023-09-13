@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include "function_pointers.h"
 #include <stdlib.h>
+#include <stdio.h>
 #include "3-calc.h"
 
 /**
@@ -12,14 +11,17 @@
 
 int main(int argc, char *argv[])
 {
-	int r;
+	int R;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	r = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
-	printf("%d/n", r);
+
+	R = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", R);
+
 	return (0);
 }
+
