@@ -7,5 +7,5 @@ chmod u+x *-*
 git add .
 git commit -m "$commit_message"
 git push
-loober=$((loober + 1))
+((loober++))
 echo "$loober" > counter.txt
