@@ -1,9 +1,11 @@
 #!/bin/bash
 #this is a shortcut for pushing alx project to github
-
+loober=echo counter.txt
 timestamp=$(date +"%Y-%m-%d %H:%M:%S")
-commit_message="Commit with timestamp: $timestamp"
+commit_message="Commit with timestamp: $loober"
 chmod u+x *-*
 git add .
 git commit -m "$commit_message"
 git push
+loober=$((loober + 1))
+echo "$loober" > counter.txt
