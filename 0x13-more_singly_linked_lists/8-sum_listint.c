@@ -1,13 +1,13 @@
 #include "lists.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * listint_len - Print elements of a singly linked list.
- * @h: Pointer to a list.
+ * sum_listint - Sum all of the data (n) in a list.
+ * @head: Address of the first node of the list.
  * Return: Integer.
  **/
 
-size_t listint_len(const listint_t *h)
+int sum_listint(listint_t *head)
 {
 	const listint_t *temp;
 	unsigned int sum = 0;
