@@ -12,7 +12,7 @@ int sum_listint(listint_t *head)
 	const listint_t *temp;
 	unsigned int sum = 0;
 
-	temp = h;
+	temp = head;
 	while (temp)
 	{
 		sum += temp->n;
