@@ -1,22 +1,22 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
- * listint_len - Print elements of a singly linked list.
+ * listint_len - Calculate the number of elements.
  * @h: Pointer to a list.
  * Return: Integer.
  **/
 
 size_t listint_len(const listint_t *h)
 {
-	const listint_t *temp;
-	unsigned int i = 0;
+	const listint_t *tp;
+	unsigned int cnr = 0;
 
-	temp = h;
-	while (temp)
+	tp = h;
+	while (tp)
 	{
-		i++;
-		temp = temp->next;
+		cnr++;
+		tp = tp->next;
 	}
-	return (i);
+	return (cnr);
 }
+
