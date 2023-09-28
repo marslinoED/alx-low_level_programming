@@ -11,9 +11,12 @@ unsigned int binary_to_uint(const char *b)
 	if (!b)
 		return (0);
 
-	int i = 0, size = 0, n = 1;
-	unsigned int decimal = 0;
+	int i, size, n;
+	unsigned int decimal;
 
+	size = 0;
+	n = 1;
+	decimal = 0;
 	while (b[size] != '\0')
 	{
 		if (b[size] != '1' && b[size] != '0')
